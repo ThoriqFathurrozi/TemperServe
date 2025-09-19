@@ -145,11 +145,12 @@ Once your userscript is installed and configured:
 ## 🔄 Development Workflow
 
 ```mermaid
-flowchart TD
-    A[Edit *.user.js] --> B[Temper Server detects changes<br/>and increments @version]
-    B --> C[Userscript Manager<br/>(Tampermonkey / Violentmonkey)]
-    C --> D[Click 'Check for Updates' / 'Sync']
-    D --> E[Fetch from @updateURL<br/>and refresh script]
+flowchart LR
+    A["`Edit *.user.js`"] --> B["`Temper Server detects changes
+    and increments @version`"]
+    B --> C["`Userscript Manager`"]
+    C --> D["`Click 'Check for Updates' / 'Sync'`"]
+    D --> E["`Fetch from @updateURL<br/>and refresh script`"]
 
     style A fill:#f9f,stroke:#333,stroke-width:1px
     style B fill:#bbf,stroke:#333,stroke-width:1px
