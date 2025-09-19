@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Server</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #0066cc;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Index of {{ path }}</h2>
+    <ul>
+      {% if parent %}
+      <li><a href="{{ parent }}">⬆️ Parent Directory</a></li>
+      {% endif %} {% for name, link in files %}
+      <li><a href="{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
